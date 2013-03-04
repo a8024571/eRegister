@@ -22,7 +22,7 @@ static hasMany = [classes: RegClass]
 // The mappedby property is telling the framework how to create the join between both classes.
 // Example:  in SQL this would be 'SELECT * from RegClass WHERE Class_instructor = 10'
 
-static mappedBy = [classes: 'classinstructor']
+static mappedBy = [classes: 'classInstructor']
 
 
 // Some fields can be left null or empty.  My contraints are declared here

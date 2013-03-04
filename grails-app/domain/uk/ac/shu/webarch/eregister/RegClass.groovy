@@ -6,11 +6,11 @@ class RegClass {
 	Instructor classInstructor
 	Course course
 
-    set enrolledStudent
+    Set enrolledStudent
 
     static hasMany = [enrolledStudent: Enrollment]
 
-    static mappedBy = [enrolledStudent: classes]
+    static mappedBy = [enrolledStudent: 'classes']
 
     static constraints = {
 	name(nullable:false, blank:false, maxsize:256)

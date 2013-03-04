@@ -11,12 +11,12 @@ class Student {
 
     static hasMany = [enrolledClasses:RegisterEntry]
 
-    static mappedBy = [enrolledClasses:enrolledStudent]
+    static mappedBy = [enrolledClasses: 'enrolledStudent']
  
     static constraints = {
-	FullStudentName(nullable:false, blank:false, maxsize:256)
-	StudentNumber(nullable:false, blank:false, maxsize:20)
-	DateOfBirth(nullable:false, blank:false, maxsize:15)
-	Gender(nullable:false, blank:false, maxsize:10)
+	fullStudentName(nullable:false, blank:false, maxsize:256)
+	studentNumber(nullable:false, blank:false, maxsize:20)
+	dateOfBirth(nullable:false, blank:false, maxsize:15)
+	gender(nullable:false, blank:false, maxsize:10)
     }
 }

@@ -4,11 +4,14 @@ class RegistrationSheet {
 
 	String studentName
 
+RegisterEntry registerEntry
+RegClass classes
+
 Set attendedStudents
 
-    static hasMany = [attendedStudents:RegClass]
+    static hasMany = [attendedStudents:RegisterEntry]
 
-    static mappedBy = [attendedStudents:classes]
+    static mappedBy = [attendedStudents: 'registrationSheet']
     
     static constraints = {
 	studentName(nullable:false, blank:false, maxsize:256)
