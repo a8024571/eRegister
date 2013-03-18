@@ -23,6 +23,17 @@
 			</g:if>
 			<ol class="property-list course">
 			
+				<g:if test="${courseInstance?.classes}">
+				<li class="fieldcontain">
+					<span id="classes-label" class="property-label"><g:message code="course.classes.label" default="Classes" /></span>
+					
+						<g:each in="${courseInstance.classes}" var="c">
+						<span class="property-value" aria-labelledby="classes-label"><g:link controller="regClass" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

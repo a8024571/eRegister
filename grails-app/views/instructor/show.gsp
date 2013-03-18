@@ -32,6 +32,26 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${instructorInstance?.staffid}">
+				<li class="fieldcontain">
+					<span id="staffid-label" class="property-label"><g:message code="instructor.staffid.label" default="Staffid" /></span>
+					
+						<span class="property-value" aria-labelledby="staffid-label"><g:fieldValue bean="${instructorInstance}" field="staffid"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${instructorInstance?.classes}">
+				<li class="fieldcontain">
+					<span id="classes-label" class="property-label"><g:message code="instructor.classes.label" default="Classes" /></span>
+					
+						<g:each in="${instructorInstance.classes}" var="c">
+						<span class="property-value" aria-labelledby="classes-label"><g:link controller="regClass" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">
