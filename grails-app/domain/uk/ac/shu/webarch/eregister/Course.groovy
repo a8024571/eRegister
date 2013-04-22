@@ -4,7 +4,7 @@ class Course {
 
 String courseName
 String courseCode
-String desciption
+String description
 
 Set classes
 

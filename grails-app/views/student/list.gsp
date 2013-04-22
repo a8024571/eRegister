@@ -28,6 +28,10 @@
 					
 						<g:sortableColumn property="studentNumber" title="${message(code: 'student.studentNumber.label', default: 'Student Number')}" />
 					
+						<g:sortableColumn property="dateOfBirth" title="${message(code: 'student.dateOfBirth.label', default: 'Date Of Birth')}" />
+					
+						<g:sortableColumn property="gender" title="${message(code: 'student.gender.label', default: 'Gender')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -37,6 +41,10 @@
 						<td><g:link action="show" id="${studentInstance.id}">${fieldValue(bean: studentInstance, field: "fullStudentName")}</g:link></td>
 					
 						<td>${fieldValue(bean: studentInstance, field: "studentNumber")}</td>
+					
+						<td>${fieldValue(bean: studentInstance, field: "dateOfBirth")}</td>
+					
+						<td>${fieldValue(bean: studentInstance, field: "gender")}</td>
 					
 					</tr>
 				</g:each>

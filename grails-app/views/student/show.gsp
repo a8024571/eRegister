@@ -41,6 +41,35 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${studentInstance?.dateOfBirth}">
+				<li class="fieldcontain">
+					<span id="dateOfBirth-label" class="property-label"><g:message code="student.dateOfBirth.label" default="Date Of Birth" /></span>
+					
+						<span class="property-value" aria-labelledby="dateOfBirth-label"><g:fieldValue bean="${studentInstance}" field="dateOfBirth"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${studentInstance?.gender}">
+				<li class="fieldcontain">
+					<span id="gender-label" class="property-label"><g:message code="student.gender.label" default="Gender" /></span>
+					
+						<span class="property-value" aria-labelledby="gender-label"><g:fieldValue bean="${studentInstance}" field="gender"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${studentInstance?.enrolledClasses}">
+				<li class="fieldcontain">
+					<span id="enrolledClasses-label" class="property-label"><g:message code="student.enrolledClasses.label" default="Enrolled Classes" /></span>
+					
+						<g:each in="${studentInstance.enrolledClasses}" var="e">
+						<span class="property-value" aria-labelledby="enrolledClasses-label"><g:link controller="registerEntry" action="show" id="${e.id}">${e?.fullStudentName()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

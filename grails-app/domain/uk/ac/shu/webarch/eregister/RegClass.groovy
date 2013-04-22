@@ -2,6 +2,7 @@ package uk.ac.shu.webarch.eregister
 
 class RegClass {
 	String name
+	String code
 
 	Instructor classInstructor
 	Course course
